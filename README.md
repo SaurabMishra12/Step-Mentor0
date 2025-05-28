@@ -1,9 +1,9 @@
 # Step Mentor
 
-Brief about the Idea: The idea involves developing a system that helps the Students practice questions and fulfill their other needs powered with AI. It will generate clear problem statements using GenAI, suggest relevant formulas,hints and present solutions step-by-step in the given time frame; the prototype features GenAI API for question descriptions and chatbot and machine learning for formula suggestions.
+Brief about the Idea: The idea involves developing a system that helps Students practice questions and fulfill their other needs, powered with AI. It will generate clear problem statements using LM, suggest relevant formulas, hints, and present solutions step-by-step in the given time frame; the prototype features LLM fine-tuned on specific task for question descriptions and chatbot and machine learning for formula suggestions. It also uses RAG for context-aware answers.
 
 
-Opportunity : How different is it from any other existing ideas out there? The proposed model stands out with its comprehensive learning support, leveraging advanced technologies like Prompt Engineering and Machine learning, web development. It offers a personalized learning experience akin to having a personal tutor. These features distinguish it from existing platforms, ensuring a unique and effective study tool for students. The dataset used for practising questions is imported from Online Data Lakes; some of the questions are handpicked from this dataset to show the potential of the prototypes in handling the different levels of questions.
+Opportunity: How different is it from any other existing ideas out there? The proposed model stands out with its comprehensive learning support, leveraging advanced technologies like Prompt Engineering and Machine learning, web development. It offers a personalized learning experience akin to having a personal tutor. These features distinguish it from existing platforms, ensuring a unique and effective study tool for students. The dataset used for practising questions is imported from Online Data Lakes; some of the questions are handpicked from this dataset to show the potential of the prototypes in handling the different levels of questions.
 
 
 How will it be able to solve the problem?
@@ -24,7 +24,7 @@ GenAI Question Description: Automatically generate clear and concise description
 
 • Mentor Suggestions: Analyze question contexts and suggest relevant formulas,hints and explaination to users to aid problem-solving.
 
-• Chatbot Assistance: Integrate a chatbot assistant powered by GenAI to provide real-time support, explanations, and tips for solving questions.
+• Chatbot Assistance: Integrate a chatbot assistant powered by AI to provide real-time support, explanations, and tips for solving questions.
 
 • Web Dashboard: Provide a user-friendly web-based dashboard for easy navigation, question selection, and access to features.
 

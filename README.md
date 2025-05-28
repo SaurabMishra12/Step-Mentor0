@@ -1,5 +1,7 @@
 # Step Mentor
 
+Link: https://youtu.be/RVKZBXkMGrI?si=tPkwHpJ1tD4DzvjG
+
 Brief about the Idea: The idea involves developing a system that helps Students practice questions and fulfill their other needs, powered with AI. It will generate clear problem statements using LM, suggest relevant formulas, hints, and present solutions step-by-step in the given time frame; the prototype features LLM fine-tuned on specific task for question descriptions and chatbot and machine learning for formula suggestions. It also uses RAG for context-aware answers.
 
 

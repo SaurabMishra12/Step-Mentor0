@@ -6,85 +6,64 @@
 
 ## 🌟 Overview
 
-**Step Mentor** is an advanced AI-powered educational platform designed to help students (especially JEE aspirants) practice questions, get stepwise solutions, and fulfill their learning needs. Step Mentor leverages cutting-edge technologies such as **prompt engineering**, **GenAI**, **multimodal LLMs fine-tuned with LoRA (SFT)**, and **Retrieval-Augmented Generation (RAG)** for efficient document-based question answering.
+**Step Mentor** is an advanced AI-powered educational platform for JEE aspirants and students, leveraging the latest in LLMs, prompt engineering, and GenAI. Uniquely, it incorporates:
+- **Multimodal LLMs SFT fine-tuned with LoRA** (for text, images, and more)
+- **RAG (Retrieval-Augmented Generation) for Document QA**
 
 ---
 
 ## 🧩 Key Features
 
-- **GenAI Question Description:**  
-  Automatically generate clear and concise problem statements using advanced language models.
-
-- **Stepwise Solutions:**  
-  Solutions are broken down into detailed, logical steps, enhancing understanding.
-
-- **Reference Book & Formula Sheet:**  
-  Access digital textbooks and a quick-reference formula compendium.
-
-- **Mentor Suggestions:**  
-  Context-aware recommendations for formulas, hints, and explanations.
-
-- **AI Chatbot Assistance:**  
-  Real-time support, tips, and explanations through an integrated chatbot.
-
-- **Web Dashboard:**  
-  Intuitive, user-friendly dashboard for seamless navigation.
-
-- **User Authentication:**  
-  Secure login to protect user data and progress.
-
-- **JEE Question Bank:**  
-  Extensive practice set from previous years’ JEE exams.
-
-- **Personalized Learning:**  
-  Adaptive guidance tailored to each student’s pace and needs.
-
-- **Feedback Mechanism:**  
-  Users can suggest improvements and report issues.
-
-- **Free Accessibility:**  
-  100% free—removing cost barriers for all students.
+- **GenAI Question Generation**: Automatically create clear, concise problem statements.
+- **Stepwise Solutions**: Detailed, logical step-by-step answers.
+- **Reference Book & Formula Sheet**: Digital textbooks and quick-reference formulas.
+- **Mentor Suggestions**: Context-aware hints and explanations.
+- **AI Chatbot**: Real-time support and explanations.
+- **Personalized Learning**: Adaptive to each student’s pace.
+- **Comprehensive JEE Question Bank**: For deep, targeted practice.
+- **Free Accessibility**: 100% free for all students.
 
 ---
 
-## 🤖 Advanced AI & LLM Stack
+## 🤖 Advanced AI/LLM Stack
 
-**Step Mentor** stands out by integrating state-of-the-art AI models and NLP innovations:
+Below is a simplified architecture diagram using Mermaid that works natively on GitHub:
 
 ```mermaid
-flowchart TD
-    A[User Query] --> B{AI Engine}
-    B -->|Prompt Engineering| C[GenAI Model]
-    C -->|Question & Context| D[LLM (LoRA SFT, Multimodal)]
-    D -->|Document Retrieval| E[RAG Pipeline]
-    E -->|Answer Generation| F[Stepwise Solution]
+flowchart LR
+    A[User Query] --> B[Prompt Engineering]
+    B --> C[GenAI Model]
+    C --> D[LLM<br/>(LoRA SFT, Multimodal)]
+    D --> E[RAG<br/>Document Retrieval]
+    E --> F[Stepwise Solution<br/>Generation]
     F --> G[Web Dashboard/Chatbot]
 ```
 
-- **SFT Fine-Tuned Multimodal LLMs with LoRA:**  
-  Enhanced LLMs that combine multiple modalities (text, images, etc.), fine-tuned using Supervised Fine-Tuning (SFT) and LoRA for efficiency and adaptability.
-- **RAG for Document QA:**  
-  Retrieval-Augmented Generation enables the system to fetch and synthesize answers from large document collections, boosting accuracy for document-based question answering.
+**Highlights:**
+- **SFT Fine-Tuned Multimodal LLMs with LoRA**  
+  Efficient LLM adaptation across modalities for dynamic problem-solving.
+- **RAG for Document QA**  
+  Retrieves relevant material from vast resources, synthesizes precise answers.
 
 ---
 
 ## 📊 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python (Flask/FastAPI)
-- **AI/ML:** GenAI, HuggingFace Transformers, LoRA, RAG, OpenAI APIs
-- **Database:** (Specify if any—MongoDB, PostgreSQL, etc.)
-- **Other:** Docker, GitHub Actions (CI/CD)
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python (Flask or FastAPI)
+- **AI/ML**: GenAI, HuggingFace Transformers, LoRA, RAG
+- **Database/Infra**: (Add if any)
+- **CI/CD**: GitHub Actions
 
 ---
 
 ## 🚀 Quickstart
 
-1. Clone this repo:
+1. Clone the repo:
     ```bash
     git clone https://github.com/SaurabMishra12/Step-Mentor0.git
     ```
-2. Set up dependencies:
+2. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
@@ -92,7 +71,7 @@ flowchart TD
     ```bash
     python app.py
     ```
-4. Visit the dashboard at `http://localhost:5000`
+4. Visit `http://localhost:5000` in your browser.
 
 ---
 
@@ -104,15 +83,15 @@ flowchart TD
 
 ## 🤝 Contributions
 
-Contributions, ideas, and feedback are welcome!  
-Please open issues or pull requests for suggestions and improvements.
+Feedback and PRs are welcome!  
+Open issues for suggestions and improvements.
 
 ---
 
 ## 📫 Contact
 
-- **LinkedIn:** [Saurab Mishra](#) <!-- Add your link -->
-- **Email:** <!-- Add your contact email -->
+- **LinkedIn:** [Your LinkedIn](#)
+- **Email:** <!-- Add your contact email here -->
 - **GitHub:** [SaurabMishra12](https://github.com/SaurabMishra12)
 
 ---

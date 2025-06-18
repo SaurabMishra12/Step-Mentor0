@@ -6,54 +6,59 @@
 
 ## 🌟 Overview
 
-**Step Mentor** is an advanced AI-powered educational platform for JEE aspirants and students, leveraging the latest in LLMs, prompt engineering, and GenAI. Uniquely, it incorporates:
-- **Multimodal LLMs SFT fine-tuned with LoRA** (for text, images, and more)
-- **RAG (Retrieval-Augmented Generation) for Document QA**
+**Step Mentor** is a cutting-edge, AI-native educational platform for JEE aspirants and students, powered by state-of-the-art generative AI, advanced transformer architectures, and retrieval-augmented generation (RAG). The platform uniquely integrates:
+
+- **Multimodal Large Language Models (LLMs)** with parameter-efficient fine-tuning (LoRA) for superior performance across text, image, and hybrid queries.
+- **Retrieval-Augmented Generation (RAG)** for contextually aware Document QA, leveraging vector databases and semantic search.
+- **Self-supervised and Few-shot Learning** to continually adapt to new educational content and user needs.
 
 ---
 
 ## 🧩 Key Features
 
-- **GenAI Question Generation**: Automatically create clear, concise problem statements.
-- **Stepwise Solutions**: Detailed, logical step-by-step answers.
-- **Reference Book & Formula Sheet**: Digital textbooks and quick-reference formulas.
-- **Mentor Suggestions**: Context-aware hints and explanations.
-- **AI Chatbot**: Real-time support and explanations.
-- **Personalized Learning**: Adaptive to each student’s pace.
-- **Comprehensive JEE Question Bank**: For deep, targeted practice.
-- **Free Accessibility**: 100% free for all students.
+- **Generative Question Synthesis:** AI-driven, context-adaptive question and exam creation using advanced prompt chaining and controlled generation.
+- **Explainable Stepwise Reasoning:** Transparent, interpretable multi-hop solution workflows for each problem.
+- **Integrated Reference Corpus:** Real-time access to digitized textbooks, formulae, and curated knowledge graphs.
+- **AI Mentor Guidance:** Personalized, context-sensitive feedback and hints powered by reinforcement learning from human feedback (RLHF).
+- **Conversational AI Chatbot:** Real-time, context-tracking support with memory and persona modeling.
+- **Personalized Learning Trajectories:** Adaptive content sequencing and mastery tracking with student modeling.
+- **Extensive JEE Knowledge Base:** Dynamically updated and semantically indexed question bank.
+- **Open Access:** 100% free and privacy-focused for all learners.
 
 ---
 
 ## 🤖 Advanced AI/LLM Stack
 
-Below is a simplified architecture diagram using Mermaid that works natively on GitHub:
+Below is a sophisticated architecture diagram using Mermaid, illustrating the flow of advanced AI technologies in Step Mentor:
 
 ```mermaid
-flowchart LR
-    A[User Query] --> B[Prompt Engineering]
-    B --> C[GenAI Model]
-    C --> D[LLM<br/>(LoRA SFT, Multimodal)]
-    D --> E[RAG<br/>Document Retrieval]
-    E --> F[Stepwise Solution<br/>Generation]
-    F --> G[Web Dashboard/Chatbot]
+flowchart TD
+    U[User Interaction<br/>(Text/Image/Voice)] --> P[Advanced Prompt Engineering<br/>(Prompt Chaining, Templates)]
+    P --> M[Multimodal LLM<br/>(LoRA, SFT, RLHF, Vision/Language)]
+    M -->|Semantic Embedding| V[Vector Database<br/>(FAISS, Milvus)]
+    V -->|Context Retrieval| R[RAG Module<br/>(Retriever + Generator)]
+    R --> S[Stepwise Solution Synthesizer<br/>(Tree-of-Thought, CoT)]
+    S --> X[Explainability Layer<br/>(Attention Maps, Rationales)]
+    X --> D[User Delivery<br/>(Web App, Chatbot, API)]
 ```
 
-**Highlights:**
-- **SFT Fine-Tuned Multimodal LLMs with LoRA**  
-  Efficient LLM adaptation across modalities for dynamic problem-solving.
-- **RAG for Document QA**  
-  Retrieves relevant material from vast resources, synthesizes precise answers.
+**Core Innovations:**
+- **LoRA-finetuned and RLHF-enhanced Multimodal LLMs**  
+  Efficient and scalable adaptation to diverse educational workflows and modalities.
+- **End-to-End RAG Pipeline**  
+  Leverages real-time vector search, semantic context retrieval, and generative synthesis for high-precision answers.
+- **Explainability & Transparency**  
+  Stepwise rationales, CoT/ToT reasoning, and attention visualization for enhanced trust and learning.
 
 ---
 
 ## 📊 Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask or FastAPI)
-- **AI/ML**: GenAI, HuggingFace Transformers, LoRA, RAG
-- **Database/Infra**: (Add if any)
-- **CI/CD**: GitHub Actions
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python (Flask or FastAPI)
+- **AI/ML:** Generative AI (Transformers, Vision-Language Models), LoRA, RAG, RLHF, Vector Databases (FAISS/Milvus)
+- **Infra:** (Add any cloud, deployment, or database details)
+- **CI/CD:** GitHub Actions
 
 ---
 
@@ -96,4 +101,4 @@ Open issues for suggestions and improvements.
 
 ---
 
-*Empowering students with next-gen AI for smarter learning!*
+*Empowering students with next-gen AI for smarter, transparent, and personalized learning!*

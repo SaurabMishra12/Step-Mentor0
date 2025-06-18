@@ -80,32 +80,32 @@ flowchart TB
 ```mermaid
 flowchart TB
     subgraph Input_Processing
-        A[Multimodal Input: Text | Image | Audio | LaTeX]
+        A[Multimodal Input: Text / Image / Audio / LaTeX]
         B[Input Tokenization: SentencePiece + Vision Transformer]
-        C[Semantic Preprocessing: Named Entity Recognition + OCR]
+        C[Semantic Preprocessing: Named Entity Recognition and OCR]
     end
 
     subgraph Core_AI_Engine
-        D[Prompt Engineering: Chain-of-Thought + Few-Shot]
+        D[Prompt Engineering: Chain-of-Thought and Few-Shot]
         E[Multimodal LLM: Parameter-Efficient Fine-Tuning]
         F[Attention Mechanisms: Multi-Head Self-Attention]
     end
 
     subgraph Knowledge_Retrieval
         G[Semantic Search: Dense Passage Retrieval]
-        H[Vector Similarity: Cosine + Euclidean Distance]
+        H[Vector Similarity: Cosine and Euclidean Distance]
         I[Context Ranking: Cross-Encoder Reranking]
     end
 
     subgraph Solution_Generation
-        J[Reasoning Engine: Tree-of-Thoughts + Beam Search]
+        J[Reasoning Engine: Tree-of-Thoughts and Beam Search]
         K[Solution Synthesis: Controlled Generation]
         L[Verification Layer: Self-Consistency Checking]
     end
 
     subgraph Output_Enhancement
-        M[Explainability: LIME + SHAP + Attention Maps]
-        N[Personalization: User Modeling + Adaptive Content]
+        M[Explainability: LIME, SHAP, Attention Maps]
+        N[Personalization: User Modeling and Adaptive Content]
         O[Quality Assurance: Automated Fact-Checking]
     end
 
@@ -129,6 +129,7 @@ flowchart TB
     M --> O
     N --> O
 ```
+
 
 
 ### Retrieval-Augmented Generation (RAG) Architecture

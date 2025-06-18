@@ -23,48 +23,56 @@
 ### High-Level Architecture Overview
 
 ```mermaid
-graph TB
-    subgraph "User Interface Layer"
-        UI[Web Application<br/>Flask + Jinja2 + Bootstrap]
-        Mobile[Mobile App<br/>React Native]
-        API[REST API Gateway<br/>Flask-RESTful + OpenAPI]
+flowchart TB
+    subgraph Input_Processing
+        A[Multimodal Input: Text / Image / Audio / LaTeX]
+        B[Input Tokenization: SentencePiece + Vision Transformer]
+        C[Semantic Preprocessing: Named Entity Recognition and OCR]
     end
-    
-    subgraph "AI/ML Orchestration Layer"
-        LLM[Multimodal LLM Engine<br/>Gemini Pro + Vision]
-        RAG[RAG Pipeline<br/>LangChain + LlamaIndex]
-        VectorDB[Vector Database<br/>Pinecone + Weaviate]
-        Agents[Multi-Agent System<br/>CrewAI + AutoGen]
+
+    subgraph Core_AI_Engine
+        D[Prompt Engineering: Chain-of-Thought and Few-Shot]
+        E[Multimodal LLM: Parameter-Efficient Fine-Tuning]
+        F[Attention Mechanisms: Multi-Head Self-Attention]
     end
-    
-    subgraph "Core Services"
-        QGen[Question Generation<br/>Controlled Synthesis]
-        Solver[Solution Engine<br/>CoT + ToT Reasoning]
-        Tutor[AI Tutor<br/>RLHF + Persona Modeling]
-        Analytics[Learning Analytics<br/>Recommendation Engine]
+
+    subgraph Knowledge_Retrieval
+        G[Semantic Search: Dense Passage Retrieval]
+        H[Vector Similarity: Cosine and Euclidean Distance]
+        I[Context Ranking: Cross-Encoder Reranking]
     end
-    
-    subgraph "Data Layer"
-        KG[Knowledge Graph<br/>Neo4j + RDF]
-        Content[Content Repository<br/>MongoDB + S3]
-        UserData[User Analytics<br/>PostgreSQL + Redis]
+
+    subgraph Solution_Generation
+        J[Reasoning Engine: Tree-of-Thoughts and Beam Search]
+        K[Solution Synthesis: Controlled Generation]
+        L[Verification Layer: Self-Consistency Checking]
     end
-    
-    UI --> API
-    Mobile --> API
-    API --> LLM
-    API --> RAG
-    LLM --> QGen
-    LLM --> Solver
-    LLM --> Tutor
-    LLM --> Agents
-    RAG --> VectorDB
-    Agents --> QGen
-    Agents --> Solver
-    Agents --> Tutor
-    Analytics --> KG
-    Analytics --> Content
-    Analytics --> UserData
+
+    subgraph Output_Enhancement
+        M[Explainability: LIME, SHAP, Attention Maps]
+        N[Personalization: User Modeling and Adaptive Content]
+        O[Quality Assurance: Automated Fact-Checking]
+    end
+
+    %% Main pipeline flow
+    A --> B --> C --> D
+    D --> E
+    E --> F
+
+    %% Knowledge retrieval branch
+    D --> G
+    G --> H --> I
+
+    %% Solution generation flow
+    F --> J
+    I --> J
+    J --> K --> L
+
+    %% Output enhancement
+    K --> M
+    L --> N
+    M --> O
+    N --> O
 ```
 
 ### Advanced AI/ML Pipeline Architecture

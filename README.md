@@ -1,6 +1,8 @@
 # Step Mentor 🚀
 
 [![Watch the Demo](https://img.shields.io/badge/Watch%20Demo%20on%20YouTube-RVKZBXkMGrI-red?logo=youtube)](https://youtu.be/RVKZBXkMGrI?si=tPkwHpJ1tD4DzvjG)
+
+> **⚠️ Note**: The demo video may show an earlier version of the platform due to continuous development and feature updates. The current system includes significantly more advanced AI capabilities and architectural improvements.
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)
 [![AI/ML](https://img.shields.io/badge/AI/ML-Transformers%20|%20RAG%20|%20LLM-green.svg)](https://github.com/SaurabMishra12/Step-Mentor0)
@@ -23,15 +25,16 @@
 ```mermaid
 graph TB
     subgraph "User Interface Layer"
-        UI[Web Application<br/>React.js + TypeScript]
+        UI[Web Application<br/>Flask + Jinja2 + Bootstrap]
         Mobile[Mobile App<br/>React Native]
-        API[REST API Gateway<br/>FastAPI + OpenAPI]
+        API[REST API Gateway<br/>Flask-RESTful + OpenAPI]
     end
     
     subgraph "AI/ML Orchestration Layer"
-        LLM[Multimodal LLM Engine<br/>GPT-4V + Claude + Gemini]
+        LLM[Multimodal LLM Engine<br/>Gemini Pro + Vision]
         RAG[RAG Pipeline<br/>LangChain + LlamaIndex]
         VectorDB[Vector Database<br/>Pinecone + Weaviate]
+        Agents[Multi-Agent System<br/>CrewAI + AutoGen]
     end
     
     subgraph "Core Services"
@@ -54,10 +57,11 @@ graph TB
     LLM --> QGen
     LLM --> Solver
     LLM --> Tutor
+    LLM --> Agents
     RAG --> VectorDB
-    QGen --> Analytics
-    Solver --> Analytics
-    Tutor --> Analytics
+    Agents --> QGen
+    Agents --> Solver
+    Agents --> Tutor
     Analytics --> KG
     Analytics --> Content
     Analytics --> UserData
@@ -97,11 +101,25 @@ flowchart TB
         O[Quality Assurance<br/>Automated Fact-Checking]
     end
     
+    %% Main pipeline flow
     A --> B --> C --> D
-    D --> E --> F
-    E --> G --> H --> I
-    F --> J --> K --> L
-    J --> M --> N --> O
+    D --> E
+    E --> F
+    
+    %% Knowledge retrieval branch
+    D --> G
+    G --> H --> I
+    
+    %% Solution generation flow
+    F --> J
+    I --> J
+    J --> K --> L
+    
+    %% Output enhancement
+    K --> M
+    L --> N
+    M --> O
+    N --> O
     
     style E fill:#ff9999
     style G fill:#99ccff
@@ -231,10 +249,17 @@ graph TB
 ### 🔬 Core AI Technologies
 
 - **🤖 Multimodal Foundation Models**
-  - GPT-4 Vision for text-image understanding
-  - Claude 3 for complex reasoning and analysis
-  - Gemini Pro for mathematical problem solving
-  - Custom fine-tuned models via LoRA/QLoRA
+  - Google Gemini Pro for advanced reasoning and multimodal understanding
+  - Gemini Vision for image and diagram interpretation
+  - Custom fine-tuned models via LoRA/QLoRA for domain-specific tasks
+  - Integration with open-source models (Llama 2, Mistral)
+
+- **🔄 Multi-Agent Architecture (In Development)**
+  - Specialized AI agents for different educational domains
+  - Collaborative problem-solving through agent coordination
+  - Teacher Agent for pedagogy and explanation generation
+  - Student Agent for personalized learning path optimization
+  - Evaluator Agent for assessment and feedback
 
 - **🧪 Parameter-Efficient Fine-Tuning**
   - Low-Rank Adaptation (LoRA) for domain-specific tasks
@@ -308,22 +333,48 @@ graph TB
 
 ---
 
+## 🔬 Research & Development
+
+- **🤖 Multi-Agent AI System**
+  - Collaborative AI agents with specialized roles and expertise
+  - Dynamic agent orchestration for complex problem-solving
+  - Inter-agent communication and knowledge sharing protocols
+
+- **🧠 Advanced Neural Architectures**
+  - Mixture of Experts (MoE) models for specialized domains
+  - Retrieval-Augmented Generation with dynamic knowledge updates
+  - Constitutional AI for safety and alignment
+
+- **🌐 Distributed Learning Infrastructure**
+  - Federated learning across multiple educational institutions
+  - Edge computing for reduced latency and improved privacy
+  - Blockchain-based credential verification and achievement tracking
+
+- **🎯 Next-Generation Personalization**
+  - Neuro-symbolic reasoning for explainable AI decisions
+  - Causal inference for understanding learning pathways
+  - Quantum-inspired optimization for resource allocation
+
+---
+
 ## 🏗️ Technical Stack
 
 ### Frontend Architecture
 ```
-React 18 + TypeScript + Vite
-├── State Management: Zustand + React Query
-├── UI Framework: Tailwind CSS + Headless UI
-├── Visualization: D3.js + Recharts + Mermaid
+Flask 3.0 + Jinja2 + Bootstrap 5
+├── Template Engine: Jinja2 + Custom Macros
+├── CSS Framework: Bootstrap 5 + Custom SCSS
+├── JavaScript: Vanilla JS + Alpine.js + HTMX
 ├── Math Rendering: KaTeX + MathJax
-└── Testing: Jest + React Testing Library
+├── Visualization: Chart.js + D3.js
+└── Testing: Pytest + Selenium
 ```
 
 ### Backend Infrastructure
 ```
-Python 3.11 + FastAPI + Pydantic
-├── API Framework: FastAPI + Uvicorn + Gunicorn
+Python 3.11 + Flask + SQLAlchemy
+├── Web Framework: Flask + Flask-RESTful + Blueprints
+├── Database ORM: SQLAlchemy + Alembic
 ├── Task Queue: Celery + Redis + RabbitMQ
 ├── Database: PostgreSQL + MongoDB + Neo4j
 ├── Caching: Redis Cluster + Memcached
@@ -334,7 +385,9 @@ Python 3.11 + FastAPI + Pydantic
 ### AI/ML Stack
 ```
 PyTorch 2.0 + Transformers + LangChain
+├── LLM Integration: Google Gemini Pro API + Vertex AI
 ├── Model Serving: TensorFlow Serving + ONNX Runtime
+├── Multi-Agent Framework: CrewAI + AutoGen + LangGraph
 ├── Training: Kubeflow + MLflow + Weights & Biases
 ├── Vector Store: Pinecone + Weaviate + FAISS
 ├── NLP: spaCy + NLTK + Hugging Face Transformers
@@ -388,17 +441,15 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
-npm install
 
 # 4. Set up environment variables
 cp .env.example .env
-# Edit .env with your configuration
+# Add your Gemini API key and other configurations
 
 # 5. Initialize databases
-docker-compose up -d postgres redis mongodb
-python scripts/init_db.py
+python init_db.py
 
-# 6. Start the development server
+# 6. Start the Flask development server
 python app.py
 ```
 
@@ -442,23 +493,26 @@ helm install step-mentor ./helm-chart
 - [x] Web application MVP
 - [x] User authentication system
 
-### Phase 2: Intelligence (Q2 2024) 🚧
-- [x] Advanced reasoning capabilities
+### Phase 2: Intelligence (Q2 2025) 🚧
+- [x] Advanced reasoning capabilities with Gemini Pro
 - [x] Personalization engine
+- [x] Multi-agent system foundation
 - [ ] Mobile application
 - [ ] Advanced analytics dashboard
 
-### Phase 3: Scale (Q3 2024) 📋
-- [ ] Microservices architecture
+### Phase 3: Scale (Q3 2025) 📋
+- [ ] Complete multi-agent architecture deployment
+- [ ] Microservices architecture migration
 - [ ] Multi-language support
-- [ ] Real-time collaboration
+- [ ] Real-time collaboration features
 - [ ] Advanced ML ops pipeline
 
-### Phase 4: Innovation (Q4 2024) 🔮
-- [ ] Federated learning
+### Phase 4: Innovation (Q4 2025) 🔮
+- [ ] Federated learning implementation
 - [ ] Quantum-inspired algorithms
 - [ ] AR/VR integration
 - [ ] Blockchain-based credentials
+- [ ] Neuro-symbolic reasoning
 
 ---
 
@@ -520,6 +574,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **🚀 Empowering the next generation of learners with cutting-edge AI technology**
 
-
+*Made with ❤️ by the Step Mentor Team*
 
 </div>

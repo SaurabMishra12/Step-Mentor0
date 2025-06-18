@@ -71,61 +71,57 @@ graph TB
 
 ```mermaid
 flowchart TB
-    subgraph "Input Processing"
-        A[Multimodal Input<br/>Text | Image | Audio | LaTeX]
-        B[Input Tokenization<br/>SentencePiece + Vision Transformer]
-        C[Semantic Preprocessing<br/>Named Entity Recognition + OCR]
+    subgraph Input_Processing
+        A[Multimodal Input: Text | Image | Audio | LaTeX]
+        B[Input Tokenization: SentencePiece + Vision Transformer]
+        C[Semantic Preprocessing: Named Entity Recognition + OCR]
     end
-    
-    subgraph "Core AI Engine"
-        D[Prompt Engineering<br/>Chain-of-Thought + Few-Shot]
-        E[Multimodal LLM<br/>Parameter-Efficient Fine-Tuning]
-        F[Attention Mechanisms<br/>Multi-Head Self-Attention]
+
+    subgraph Core_AI_Engine
+        D[Prompt Engineering: Chain-of-Thought + Few-Shot]
+        E[Multimodal LLM: Parameter-Efficient Fine-Tuning]
+        F[Attention Mechanisms: Multi-Head Self-Attention]
     end
-    
-    subgraph "Knowledge Retrieval"
-        G[Semantic Search<br/>Dense Passage Retrieval]
-        H[Vector Similarity<br/>Cosine + Euclidean Distance]
-        I[Context Ranking<br/>Cross-Encoder Reranking]
+
+    subgraph Knowledge_Retrieval
+        G[Semantic Search: Dense Passage Retrieval]
+        H[Vector Similarity: Cosine + Euclidean Distance]
+        I[Context Ranking: Cross-Encoder Reranking]
     end
-    
-    subgraph "Solution Generation"
-        J[Reasoning Engine<br/>Tree-of-Thoughts + Beam Search]
-        K[Solution Synthesis<br/>Controlled Generation]
-        L[Verification Layer<br/>Self-Consistency Checking]
+
+    subgraph Solution_Generation
+        J[Reasoning Engine: Tree-of-Thoughts + Beam Search]
+        K[Solution Synthesis: Controlled Generation]
+        L[Verification Layer: Self-Consistency Checking]
     end
-    
-    subgraph "Output Enhancement"
-        M[Explainability<br/>LIME + SHAP + Attention Maps]
-        N[Personalization<br/>User Modeling + Adaptive Content]
-        O[Quality Assurance<br/>Automated Fact-Checking]
+
+    subgraph Output_Enhancement
+        M[Explainability: LIME + SHAP + Attention Maps]
+        N[Personalization: User Modeling + Adaptive Content]
+        O[Quality Assurance: Automated Fact-Checking]
     end
-    
+
     %% Main pipeline flow
     A --> B --> C --> D
     D --> E
     E --> F
-    
+
     %% Knowledge retrieval branch
     D --> G
     G --> H --> I
-    
+
     %% Solution generation flow
     F --> J
     I --> J
     J --> K --> L
-    
+
     %% Output enhancement
     K --> M
     L --> N
     M --> O
     N --> O
-    
-    style E fill:#ff9999
-    style G fill:#99ccff
-    style J fill:#99ff99
-    style M fill:#ffcc99
 ```
+
 
 ### Retrieval-Augmented Generation (RAG) Architecture
 
@@ -297,9 +293,9 @@ graph TB
 
 - **🎯 Adaptive Learning Algorithms**
   - Bayesian Knowledge Tracing
-  - Item Response Theory (IRT) modeling
+  - Item Response Theory (IRT) modelling
   - Deep Knowledge Tracing with LSTM/Transformer
-  - Personalized difficulty adjustment
+  - Personalised difficulty adjustment
 
 - **🧠 Student Modeling**
   - Cognitive load assessment
@@ -465,25 +461,6 @@ helm install step-mentor ./helm-chart
 
 ---
 
-## 📊 Performance Metrics
-
-### AI Model Performance
-| Metric | Score | Benchmark |
-|--------|-------|-----------|
-| Question Accuracy | 94.7% | JEE Main 2024 |
-| Solution Correctness | 96.2% | Expert Validation |
-| Explanation Quality | 92.8% | Human Evaluation |
-| Response Latency | <2.5s | P95 Response Time |
-
-### System Performance
-| Component | Throughput | Latency | Availability |
-|-----------|------------|---------|--------------|
-| API Gateway | 10K RPS | 50ms | 99.9% |
-| Model Inference | 1K RPS | 500ms | 99.5% |
-| Database Queries | 50K QPS | 10ms | 99.99% |
-| Cache Hit Ratio | 95% | 1ms | 99.99% |
-
----
 
 ## 🧪 Development Roadmap
 
@@ -507,7 +484,7 @@ helm install step-mentor ./helm-chart
 - [ ] Real-time collaboration features
 - [ ] Advanced ML ops pipeline
 
-### Phase 4: Innovation (Q4 2025) 🔮
+### Phase 4: Innovation (Q4 2026) 🔮
 - [ ] Federated learning implementation
 - [ ] Quantum-inspired algorithms
 - [ ] AR/VR integration
@@ -518,21 +495,7 @@ helm install step-mentor ./helm-chart
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Code Standards
-- Follow PEP 8 for Python code
-- Use ESLint + Prettier for JavaScript/TypeScript
-- Write comprehensive tests (minimum 80% coverage)
-- Document all public APIs using OpenAPI/Swagger
-
+For contributions, write to me at saurab23@iisertvm.ac.in
 ---
 
 ## 📄 License
@@ -546,20 +509,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Research Papers**: Attention Is All You Need, RAG, Chain-of-Thought Prompting
 - **Open Source Libraries**: Transformers, LangChain, FastAPI, React
 - **Educational Partners**: NCERT, JEE Preparation Institutes
-- **Community Contributors**: All our amazing contributors and testers
 
 ---
 
-## 📞 Contact & Support
-
-- **🌐 Website**: [stepmentor.ai](https://stepmentor.ai)
-- **📧 Email**: support@stepmentor.ai
-- **💼 LinkedIn**: [Step Mentor](https://linkedin.com/company/stepmentor)
-- **🐦 Twitter**: [@StepMentorAI](https://twitter.com/StepMentorAI)
-- **📱 Discord**: [Join our community](https://discord.gg/stepmentor)
-- **🎯 GitHub**: [SaurabMishra12](https://github.com/SaurabMishra12)
-
----
 
 ## 📊 Analytics & Metrics
 
@@ -573,7 +525,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
 
 **🚀 Empowering the next generation of learners with cutting-edge AI technology**
-
-*Made with ❤️ by the Step Mentor Team*
 
 </div>

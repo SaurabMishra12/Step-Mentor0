@@ -21,7 +21,7 @@
 ## 🏗️ System Architecture
 
 ### High-Level Architecture Overview
-
+```mermaid
 graph TB
     subgraph "User Interface Layer"
         UI[Web Application<br/>Flask + Jinja2 + Bootstrap]
@@ -64,7 +64,7 @@ graph TB
     Analytics --> KG
     Analytics --> Content
     Analytics --> UserData
-
+```
 ### Advanced AI/ML Pipeline Architecture
 
 ```mermaid
